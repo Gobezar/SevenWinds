@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import HeaderMenuElement from "../../../entities/HeaderMenuElement/UI/HeaderMenuElement";
+import { HeaderMenuElement } from "../../../entities/HeaderMenuElement";
 import { menuElements } from "../../../entities/HeaderMenuElement/consts/headerMenuElements";
 import cl from "./Header.module.sass";
 
-const Header = () => {
+export const Header = () => {
   const [activeId, setActiveId] = useState(0);
 
   function setActiveMenuElement(id: number): void {
@@ -26,5 +26,3 @@ const Header = () => {
     </div>
   );
 };
-
-export default Header;

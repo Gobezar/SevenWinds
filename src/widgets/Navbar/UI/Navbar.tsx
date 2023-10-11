@@ -1,13 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import { navbarElements } from "../consts/navbarElements";
+import { useAppSelector, useAppDispatch } from "../../../app/store/reduxHooks";
+import { setActive } from "../../WorkingSection/model/workingSectionSlice";
 import cl from "./Navbar.module.sass";
-import NavbarItemElement from "../../../entities/NavbarItemElement/UI/NavbarItemElement";
+import { NavbarItemElement } from "../../../entities/NavbarItemElement";
 
-const Navbar = () => {
-  const [activeId, setActiveId] = useState(0);
+export const Navbar = () => {
+  const dispatch = useAppDispatch();
+  const { activeNavbarElement } = useAppSelector(
+    (state) => state.workingSectionSlice
+  );
 
   function setActiveNavbarElement(id: number): void {
-    setActiveId(id);
+    dispatch(setActive(id));
   }
 
   return (
@@ -26,12 +31,10 @@ const Navbar = () => {
             id={el.id}
             element={el.element}
             onClick={() => setActiveNavbarElement(el.id)}
-            activeId={activeId}
+            activeId={activeNavbarElement}
           />
         ))}
       </div>
     </div>
   );
 };
-
-export default Navbar;

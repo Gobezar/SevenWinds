@@ -1,0 +1,102 @@
+.contentRowWrapper
+    display: flex
+    align-items: center
+    flex-direction: row
+    height: 60px
+    width: calc(100vw - 235px)
+    background-color: #202124
+    border-bottom: 1px solid #414144
+    color: #FFF
+    padding: 0 9px
+
+    .rowName
+        width: 740px
+        height: 100%
+        display: flex
+        align-items: center
+        justify-content: flex-start
+
+        label
+            width: 95%
+
+        input
+            width: 100%
+            background: transparent
+            color: #FFF
+            border: none
+            cursor: pointer
+            font-size: 16px
+            padding: 10px
+
+            &:focus
+                outline: none
+                border-radius: 6px
+                box-shadow: 0px 0px 0px 1px #414144
+
+    .salary,  .equipmentCosts, .overheads, .estimatedProfit 
+        width: 194px
+        height: 100%
+        display: flex
+        align-items: center
+        justify-content: flex-start
+
+        label
+            width: 95%
+
+        input
+            width: 100%
+            background: transparent
+            color: #FFF
+            border: none
+            cursor: pointer
+            font-size: 16px
+            padding: 10px
+
+            &:focus
+                outline: none
+                border-radius: 6px
+                box-shadow: 0px 0px 0px 1px #414144
+
+    .iconWrapper
+        width: 110px
+        padding-left: 12px
+        display: flex
+        flex-direction: row
+        align-items: center
+        background-color: transparent
+
+        .iconRow
+            background-image: url('../../../../public/images/level.svg')
+            width: 24px
+            height: 24px
+            background-position: center center
+            background-repeat: no-repeat
+            background-size: 20px
+            cursor: pointer
+            position: relative
+
+        .iconRowHovered
+            background-color: #414144
+            border-radius: 6px 0px 0px 6px                     
+        
+        .iconDelete 
+            background-image: url('../../../../public/images/delete.svg')
+            width: 24px
+            height: 24px
+            background-position: center center
+            background-repeat: no-repeat
+            background-size: 13px
+            cursor: pointer  
+            opacity: 0
+
+        .iconDeleteHovered
+            opacity: 1
+            background-color: #414144
+            border-radius: 0px 6px 6px 0px
+    
+    .childLevel1
+        padding-left: 32px
+
+    .childLevel2
+        padding-left: 52px
+

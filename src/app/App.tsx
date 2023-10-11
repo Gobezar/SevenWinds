@@ -1,13 +1,12 @@
 import React from "react";
-import MainPage from "../pages/MainPage/UI/MainPage";
+import { ReduxProvider } from "./store/provider";
+import { MainPage } from "../pages/MainPage";
 import "./styles/global.sass";
 
-function App() {
+export function App() {
   return (
-    <>
+    <ReduxProvider>
       <MainPage />
-    </>
+    </ReduxProvider>
   );
 }
-
-export default App;

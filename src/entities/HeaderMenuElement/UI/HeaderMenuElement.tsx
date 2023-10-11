@@ -2,7 +2,7 @@ import React, { MouseEventHandler } from "react";
 import cn from "classnames";
 import cl from "./HeaderMenuElement.module.sass";
 
-const HeaderMenuElement = ({
+export const HeaderMenuElement = ({
   id,
   element,
   activeId,
@@ -22,5 +22,3 @@ const HeaderMenuElement = ({
     </div>
   );
 };
-
-export default HeaderMenuElement;

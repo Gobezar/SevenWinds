@@ -1,14 +1,17 @@
 import React from "react";
-import Header from "../../../widgets/Header/UI/Header";
-import Navbar from "../../../widgets/Navbar/UI/Navbar";
+import { Header } from "../../../widgets/Header";
+import { Navbar } from "../../../widgets/Navbar";
+import { WorkingSection } from "../../../widgets/WorkingSection";
+import cl from "./MainPage.module.sass";
 
-const MainPage = () => {
+export const MainPage = () => {
   return (
     <div>
       <Header />
-      <Navbar />
+      <div className={cl.mainBlock}>
+        <Navbar />
+        <WorkingSection />
+      </div>
     </div>
   );
 };
-
-export default MainPage;

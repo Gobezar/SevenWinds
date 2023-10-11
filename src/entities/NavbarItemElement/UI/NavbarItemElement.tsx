@@ -2,7 +2,7 @@ import React, { MouseEventHandler } from "react";
 import cn from "classnames";
 import cl from "./NavbarItemElement.module.sass";
 
-const NavbarItemElement = ({
+export const NavbarItemElement = ({
   id,
   element,
   activeId,
@@ -25,5 +25,3 @@ const NavbarItemElement = ({
     </div>
   );
 };
-
-export default NavbarItemElement;
